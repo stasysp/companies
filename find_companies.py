@@ -176,7 +176,7 @@ for i in range (0, len(jsons)):
     
     response = json.loads(requests.get(query).text)['response']['docs']
 
-    f = open('rez_test.json', 'w')
+    f = open(str(i) + '_rez_test.json', 'w')
     for i in range(0, len(response)-1):    
         for j in range(i+1, len(response)):        
             a = Company(response[i])
